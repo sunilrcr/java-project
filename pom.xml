@@ -30,14 +30,13 @@
 
     <build>
         <plugins>
-            <!-- Add the maven-war-plugin -->
+            <!-- Configure the maven-war-plugin to ignore missing web.xml -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
                 <configuration>
-                    <!-- Optional: Configure the WAR file name -->
-                    <warName>${project.artifactId}</warName>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
 
